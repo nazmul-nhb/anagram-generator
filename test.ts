@@ -1,5 +1,5 @@
 import { generateAnagrams } from './src';
 
 console.info(
-	generateAnagrams('maker', { validWords: true, limit: 'all' }),
+	generateAnagrams('brain', { validWords: false, limit: 'all' }),
 );

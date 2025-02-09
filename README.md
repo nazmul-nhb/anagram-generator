@@ -46,16 +46,16 @@ console.log(anagrams);
 You can specify options such as limiting results or filtering valid dictionary words. By default it generates valid anagrams found in the dictionary.
 
 ```ts
-import { generateAnagrams } from 'anagram-generator';
+import { generateAnagrams } from 'nhb-anagram-generator';
 
 const options = {
   limit: 50, // Return a maximum of 50 anagrams
-  validWords: false, // Include all generated anagrams.
+  validWords: false, // Include all generated anagrams no matter valid or invalid (not found in dictionary)
 };
 
 const anagrams = generateAnagrams('brain', options);
 console.log(anagrams);
-// Example output: ["brain", "brain", "barn", "rain", "bain", ...]
+// Example output: ['brain', 'brani', 'brian', 'brina', 'brnai', 'brnia', 'barin', ...]
 ```
 
 ## API Reference
@@ -66,7 +66,7 @@ console.log(anagrams);
 
 - `word` (string) - The input word to generate anagrams from.
 - `options` (optional)
-  - `limit` (`number | 'all'`) - The maximum number of anagrams to return. Default is `100`. Set to `'all'` for unlimited or any other limit of your choice.
+  - `limit` (`number | 'all'`) - The maximum number of anagrams to return. Default is `100`. Set to `'all'` for unlimited or any other limit (e.g. `500`) of your choice.
   - `validWords` (`boolean`) - If `true`, only words found in the dictionary will be returned. Default is `true`.
 
 #### Returns
@@ -76,7 +76,7 @@ console.log(anagrams);
 ## Dictionary Support
 
 - The package includes a built-in dictionary to validate generated anagrams.
-- To disable dictionary validation, set `validWords: false` in options.
+- To disable dictionary validation, set `{validWords: false}` in options.
 
 ## License
 
