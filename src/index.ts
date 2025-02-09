@@ -6,10 +6,10 @@ const dictionary = new Set(
 );
 
 /**
- * * Efficiently generates unique anagrams of a word.
+ * * Efficiently generates unique anagrams of a word. By default returns maximum of `100` anagrams.
  * @param word The word for generating anagrams.
- * @param options The options to generate anagrams: limit the output, should lookup in the dictionary.
- * @returns An array of generated anagrams. THe first element is always the given word.
+ * @param options The options to generate anagrams: limit the output, whether to lookup in the dictionary.
+ * @returns An array of generated anagrams. The first element is always the given word.
  */
 export function generateAnagrams(
 	word: string,
@@ -17,7 +17,7 @@ export function generateAnagrams(
 ): string[] {
 	if (word.length <= 1) return [word];
 
-	const { limit = 100, validWords = false } = options || {};
+	const { limit = 100, validWords = true } = options || {};
 
 	const uniqueAnagrams = new Set<string>();
 
@@ -35,12 +35,12 @@ export function generateAnagrams(
 		}
 
 		for (let i = 0; i < remaining.length; i++) {
+			if (limit !== 'all' && uniqueAnagrams.size >= limit) return;
+
 			_permute(
 				str + remaining[i],
 				remaining.slice(0, i) + remaining.slice(i + 1),
 			);
-
-			if (limit !== 'all' && uniqueAnagrams.size >= limit) return;
 		}
 	};
 
