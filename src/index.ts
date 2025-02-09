@@ -6,10 +6,11 @@ const dictionary = new Set(
 );
 
 /**
- * * Efficiently generates unique anagrams of a word. By default returns maximum of `100` anagrams.
+ * * Utility to generate unique anagrams of a word.
+ * * By default returns maximum of `100` `valid (available in dictionary) anagrams`.
  * @param word The word for generating anagrams.
  * @param options The options to generate anagrams: limit the output, whether to lookup in the dictionary.
- * @returns An array of generated anagrams. The first element is always the given word.
+ * @returns An array of generated anagrams `(in lowercase)`. The first element is always the given word.
  */
 export function generateAnagrams(
 	word: string,
