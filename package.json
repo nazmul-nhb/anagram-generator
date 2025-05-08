@@ -1,7 +1,7 @@
 {
 	"name": "nhb-anagram-generator",
 	"version": "1.2.3",
-	"description": "A tool to generate anagrams.",
+	"description": "A tool to generate meaningful anagrams.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {

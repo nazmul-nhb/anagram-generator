@@ -1,5 +1,17 @@
 # Anagram Generator
 
+<p>
+  <a href="https://www.npmjs.com/package/nhb-anagram-generator" aria-label="Downloads">
+    <img src="https://img.shields.io/npm/dm/nhb-anagram-generator.svg?label=downloads&style=for-the-badge" alt="Downloads" />
+  </a>
+  <a href="https://www.npmjs.com/package/nhb-anagram-generator" aria-label="Version">
+    <img src="https://img.shields.io/npm/v/nhb-anagram-generator.svg?style=for-the-badge" alt="Version" />
+  </a>
+  <a href="https://www.npmjs.com/package/nhb-anagram-generator" aria-label="License">
+    <img src="https://img.shields.io/npm/l/nhb-anagram-generator.svg?label=license&style=for-the-badge" alt="License" />
+  </a>
+</p>
+
 Anagram Generator is a utility package that efficiently generates unique anagrams of a given word. It supports filtering anagrams based on a dictionary (English; embedded in the package) and limiting the number of results.
 
 ## Features
@@ -14,7 +26,7 @@ Anagram Generator is a utility package that efficiently generates unique anagram
 Install via npm or yarn:
 
 ```sh
-npm install nhb-anagram-generator
+npm i nhb-anagram-generator
 ```
 
 ```sh

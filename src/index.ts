@@ -1,9 +1,8 @@
 import wordsData from './data/english-words.json';
+
 import type { AnagramOptions } from './types';
 
-const dictionary = new Set(
-	(wordsData as { words: string[] }).words.map((word) => word.toLowerCase()),
-);
+const dictionary = new Set((wordsData as { words: string[] }).words);
 
 /**
  * * Utility to generate unique anagrams of a word.
