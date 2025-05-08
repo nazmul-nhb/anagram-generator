@@ -1,14 +1,13 @@
 {
 	"name": "nhb-anagram-generator",
-	"version": "1.2.3",
-	"description": "A tool to generate meaningful anagrams.",
+	"version": "1.2.4",
+	"description": "A JavaScript/TypeScript library to generate meaningful anagrams.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"clean": "rimraf dist",
 		"build": "node build.mjs",
 		"prepublishOnly": "node build.mjs",
-		"test": "jest --coverage",
 		"format": "prettier --write src/",
 		"lint": "node lint.mjs",
 		"fix": "node fix.mjs"
@@ -34,10 +33,9 @@
 		"name": "Nazmul Hassan",
 		"email": "nazmulnhb@gmail.com"
 	},
-	"license": "ISC",
+	"license": "MIT",
 	"devDependencies": {
 		"@eslint/js": "^9.20.0",
-		"@types/jest": "^29.5.14",
 		"@types/node": "^22.13.1",
 		"@typescript-eslint/eslint-plugin": "^8.23.0",
 		"@typescript-eslint/parser": "^8.23.0",
@@ -48,11 +46,9 @@
 		"execa": "^9.5.2",
 		"globals": "^15.14.0",
 		"globby": "^14.1.0",
-		"jest": "^29.7.0",
 		"prettier": "^3.5.0",
 		"progress-estimator": "^0.3.1",
 		"rimraf": "^6.0.1",
-		"ts-jest": "^29.2.5",
 		"typescript": "^5.7.3",
 		"typescript-eslint": "^8.23.0"
 	}
